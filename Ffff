@@ -1,0 +1,21 @@
+getgenv().PazzoConfig = {
+    Volume = 1,
+    URL = "https://raw.githubusercontent.com/YourUsername/YourRepo/main/ragazzopazzo_beat.mp3", -- GitHub raw URL here
+    FileName = "ragazzopazzo_beat.mp3"
+}
+
+local function playPazzoAudio()
+    if not isfile(PazzoConfig.FileName) then
+        writefile(PazzoConfig.FileName, syn.request({
+            Url = PazzoConfig.URL,
+            Method = "GET"
+        }).Body)
+    end
+
+    local sound = Instance.new("Sound", workspace)
+    sound.SoundId = getcustomasset(PazzoConfig.FileName)
+    sound.Volume = PazzoConfig.Volume
+    sound:Play()
+end
+
+playPazzoAudio()
