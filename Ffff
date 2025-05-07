@@ -1,6 +1,6 @@
 getgenv().PazzoConfig = {
     Volume = 1,
-    URL = "https://raw.githubusercontent.com/YourUsername/YourRepo/main/ragazzopazzo_beat.mp3", -- GitHub raw URL here
+    URL = "https://raw.githubusercontent.com/SmilerVinix/Future-hacker/refs/heads/main/Ffff", -- GitHub raw URL here
     FileName = "ragazzopazzo_beat.mp3"
 }
 
